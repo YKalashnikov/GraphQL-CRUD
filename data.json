@@ -2,26 +2,23 @@
   "customers": [
     {
       "id": "1",
-      "name": "John Doe",
-      "email": "john@gmail.com",
-      "age": 36
+      "name": "John ",
+      "email": "john@gmail.com"
     },
     {
       "id": "3",
-      "name": "Tom Jones",
-      "email": "tom@gmail.com",
-      "age": 23
+      "name": "Vasya",
+      "email": "Vasya@gmail.com"
+    },
+    {
+      "id": "4",
+      "name": "Dima ",
+      "email": "dima@gmail.com"
     },
     {
       "id": "5",
-      "name": "Jen Thompson",
-      "email": "jen@gmail.com",
-      "age": 22
-    },
-    {
-      "name": "Dik",
-      "email": "dik@gmail.com",
-      "id": "ztbT0yV"
+      "name": "Dik ",
+      "email": "Dik@gmail.com"
     }
   ]
 }

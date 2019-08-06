@@ -14,8 +14,7 @@ const CustomerType = new GraphQLObjectType({
   fields: () => ({
     id: { type: GraphQLString },
     name: { type: GraphQLString },
-    email: { type: GraphQLString },
-    age: { type: GraphQLInt }
+    email: { type: GraphQLString }
   })
 });
 
@@ -76,6 +75,23 @@ const mutation = new GraphQLObjectType({
             headers: {
               "Content-Type": "application/json"
             },        
+          }).then(res => res.json());
+        }
+      },
+      editCustomer: {
+        type: CustomerType,
+        args: {
+          id: { type: new GraphQLNonNull(GraphQLString) },
+          name: { type:  GraphQLString },
+          email: { type:  GraphQLString }
+        },
+        resolve(parentValue, args) {
+          return fetch("http://localhost:3000/customers/"+args.id,{
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json"
+            },      
+            body: JSON.stringify(args)     
           }).then(res => res.json());
         }
       }
